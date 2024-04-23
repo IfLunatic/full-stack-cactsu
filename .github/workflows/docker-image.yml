@@ -29,6 +29,8 @@ jobs:
         push: true
         context: ./cactsu-server/
         tags: user/be:latest
+        secrets: |
+            GIT_AUTH_TOKEN=${{ secrets.MYTOKEN }}
 
     - name: Debug Docker Build Logs
       run: |
